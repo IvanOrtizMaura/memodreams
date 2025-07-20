@@ -1,6 +1,7 @@
 {
   "conventionalCommits.scopes": [
     "new project",
-    "topbar"
+    "topbar",
+    "WIP MDreams"
   ]
 }
