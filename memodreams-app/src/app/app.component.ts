@@ -1,12 +1,21 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { MenuItem } from 'primeng/api';
+import { MenubarModule } from 'primeng/menubar'; // 👈 esto es clave
+import { TopbarComponent } from './shared/topbar/topbar.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [MenubarModule, TopbarComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'memodreams-app';
+  items: MenuItem[] = [];
+
+  ngOnInit() {
+    this.items = [
+      { label: 'Inicio', icon: 'pi pi-home' },
+      { label: 'Servicios', icon: 'pi pi-briefcase' },
+    ];
+  }
 }
