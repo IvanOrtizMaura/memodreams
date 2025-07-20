@@ -10,12 +10,9 @@ import { TopbarComponent } from './shared/topbar/topbar.component';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  items: MenuItem[] = [];
+  title = 'MDreams';
 
   ngOnInit() {
-    this.items = [
-      { label: 'Inicio', icon: 'pi pi-home' },
-      { label: 'Servicios', icon: 'pi pi-briefcase' },
-    ];
+    
   }
 }
