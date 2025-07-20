@@ -17,13 +17,13 @@ import { MenuItem } from 'primeng/api';
 export class TopbarComponent {
 sidebarVisible = false;
 
-  menuItems: MenuItem[] = [
-    { label: 'INICIO', routerLink: '/' },
-    { label: 'SERVICIOS', routerLink: '/servicios' },
-    { label: 'EVENTOS', routerLink: '/eventos' },
-    { label: 'GALERÍA', routerLink: '/galeria' },
-    { label: 'CONTACTO', routerLink: '/contacto' }
-  ];
+  menuItems = [
+  { label: 'INICIO', routerLink: ['/inicio'] },
+  { label: 'SERVICIOS', routerLink: ['/servicios'] },
+  { label: 'EVENTOS', routerLink: ['/eventos'] },
+  { label: 'GALERÍA', routerLink: ['/galeria'] },
+  { label: 'CONTACTO', routerLink: ['/contacto'] }
+];
 
   toggleSidebar() {
     this.sidebarVisible = !this.sidebarVisible;
