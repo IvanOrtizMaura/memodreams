@@ -3,7 +3,6 @@ import { RouterModule } from '@angular/router';
 import { MenubarModule } from 'primeng/menubar';
 import { ButtonModule } from 'primeng/button';
 import { SidebarModule } from 'primeng/sidebar';
-import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-topbar',
@@ -19,9 +18,22 @@ sidebarVisible = false;
 
   menuItems = [
   { label: 'INICIO', routerLink: ['/inicio'] },
-  { label: 'SERVICIOS', routerLink: ['/servicios'] },
-  { label: 'EVENTOS', routerLink: ['/eventos'] },
-  { label: 'GALERÍA', routerLink: ['/galeria'] },
+  { 
+    label: 'SERVICIOS', 
+    items: [
+      { label: 'TOTEM', routerLink: ['/servicios/totem'] },
+      { label: 'MAGAZINEBOX', routerLink: ['/servicios/magazinebox'] },
+      { label: 'MAGIC MIRROR', routerLink: ['/servicios/magic-mirror'] },
+      { label: 'AI', routerLink: ['/servicios/ai'] },
+      { label: 'VINTAGE', routerLink: ['/servicios/vintage'] },
+      { label: '360', routerLink: ['/servicios/360'] },
+      { label: 'VOGUE', routerLink: ['/servicios/vogue'] },
+      { label: 'MATRIX', routerLink: ['/servicios/matrix'] },
+      { label: 'MPHONE', routerLink: ['/servicios/mphone'] },
+      { label: 'MTRUCK', routerLink: ['/servicios/mtruck'] },
+    ]
+  },
+  { label: 'ROBOTS', routerLink: ['/robots'] },
   { label: 'CONTACTO', routerLink: ['/contacto'] }
 ];
 
