@@ -1,0 +1,153 @@
+:host {
+  display: block;
+  font-family: "Inter", sans-serif;
+  color: #00346d;
+  background-color: #ffffff;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 60px;
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+}
+
+.services {
+  text-align: center;
+  padding: 2rem 1rem;
+
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+
+  .p-grid {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    .p-col-12 {
+      max-width: 300px;
+      max-height: 220px;
+      padding: 1rem;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        margin: 0.5rem;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: #555;
+      }
+    }
+  }
+}
+
+.about {
+  text-align: center;
+  padding: 10rem 1rem 0rem 1rem;
+
+  .about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 6rem;
+
+    .about-img {
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+      box-shadow: 0 4px 15px rgba(0, 52, 109, 0.2);
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    text-align: justify;
+  }
+}
+
+.clients {
+  text-align: center;
+  padding: 1rem 1rem;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+
+  img {
+    max-width: 15rem;
+  }
+}
+
+.contact-us {
+  text-align: center;
+  padding: 1rem;
+
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+}
+::ng-deep {
+  .hero {
+    .p-button {
+      background-color: #00346d;
+      color: white;
+      border: none;
+    }
+    .p-button:hover {
+      background-color: #ffffff;
+      color: #00346d;
+      border: 1px solid #0b3d91;
+    }
+  }
+  .contact-us {
+    .p-button {
+      background-color: #003366;
+      color: white;
+      border: none;
+    }
+    .p-button:hover {
+      background-color: #ffffff;
+      color: #00346d;
+      border: 1px solid #0b3d91;
+    }
+  }
+}

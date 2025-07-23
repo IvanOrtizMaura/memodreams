@@ -1,0 +1,93 @@
+<section class="hero">
+  <div class="container">
+    <h1>
+      <span class="seo-title">Momentos únicos.</span><br />
+      <span class="seo-title">Experiencias inolvidables.</span>
+    </h1>
+    <p-button
+      label="Descubre nuestros servicios"
+      class="p-button-raised p-button-primary cta-btn"
+      (onClick)="routeTo('servicios')"
+    ></p-button>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <h2 class="section-title">SERVICIOS DESTACADOS</h2>
+    <div class="p-grid">
+      @for (service of services; track $index) {
+      <div class="p-col-12 p-md-3">
+        <p-card [header]="service.title">
+          <ng-template pTemplate="header">
+            <img
+              [src]="service.img"
+              [alt]="service.title + '-elegante-mdreams'"
+              class="service-img"
+            />
+          </ng-template>
+          <p>{{ service.description }}</p>
+        </p-card>
+      </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="container">
+    <h2 class="section-title">QUIÉNES SOMOS</h2>
+    <div class="about-content">
+      <img
+        src="assets/img/quienes-somos-mdreams.png"
+        alt="Quiénes somos MDreams"
+        class="about-img"
+      />
+      <p>
+        En <strong>MDreams</strong>, nos apasiona crear experiencias memorables
+        con entretenimiento innovador. Nos especializamos en fotomatones, robots
+        artísticos y animaciones interactivas para bodas y eventos corporativos.
+        Nuestro equipo profesional te ayudará a destacar tu celebración.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="clients">
+  <div class="container">
+    <h2 class="section-title">Clientes felices</h2>
+    <p-carousel
+      autoplayInterval="4000"
+      [value]="products"
+      [numVisible]="2"
+      [numScroll]="1"
+      [circular]="true"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <ng-template let-product #item>
+        <div class="border border-surface rounded-border m-2 p-4">
+          <div class="mb-4">
+            <div class="relative mx-auto">
+              <img
+                [src]="product.image"
+                [alt]="product.name"
+                class="w-full rounded-border"
+              />
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+</section>
+
+<section class="contact-us">
+  <div class="container">
+    <h2>¿Listo para hacer magia en tu evento?</h2>
+    <p-button
+      label="Contáctanos"
+      class="p-button-raised p-button-primary cta-btn"
+      (onClick)="routeTo('contacto')"
+    ></p-button>
+  </div>
+</section>
